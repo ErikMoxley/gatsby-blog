@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{vx99:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),r=a("Bl7J"),c=a("vrFN");t.default=function(){return l.a.createElement(r.a,null,l.a.createElement(c.a,{title:"Home"}),l.a.createElement("h1",null,"Start of my blog page using Gatsbyjs + Reactjs"))}}}]);
+//# sourceMappingURL=component---src-pages-blog-js-bc2b3bdc1aa89e1bea3f.js.map
