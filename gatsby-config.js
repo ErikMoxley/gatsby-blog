@@ -4,6 +4,7 @@ module.exports = {
     description: `Blog site built using Gatsbyjs.`,
     author: `Erik Moxley`,
   },
+  pathPrefix: "/gatsby-blog",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
