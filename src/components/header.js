@@ -23,10 +23,13 @@ const Header = props => {
   return (
     <div>
       <Navbar color="light" light expand="sm">
-        <NavbarBrand href="/">Erik Moxley</NavbarBrand>
+        <NavbarBrand href="https://www.erikmoxley.me/">Erik Moxley</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
+            <NavItem>
+              <NavLink href="/">Home</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink href="/about/">About</NavLink>
             </NavItem>
