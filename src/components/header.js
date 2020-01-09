@@ -1,4 +1,3 @@
-// import PropTypes from "prop-types"
 import React, { useState } from "react"
 import {
   Collapse,
@@ -8,11 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
 } from "reactstrap"
 
 const Header = props => {
@@ -22,34 +16,29 @@ const Header = props => {
 
   return (
     <div>
-      <Navbar color="light" light expand="sm">
-        <NavbarBrand href="https://www.erikmoxley.me/">Erik Moxley</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/">Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/about/">About</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/tags">Tags</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Blogs
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
+      <Navbar fixed="top" light expand="sm">
+        <div className="container">
+          <NavbarBrand href="https://www.erikmoxley.me/">
+            Erik Moxley
+          </NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/about/">About</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/team">Team</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/tags">Tags</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </div>
       </Navbar>
     </div>
   )
