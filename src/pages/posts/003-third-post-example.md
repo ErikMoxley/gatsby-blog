@@ -2,7 +2,6 @@
 title: "Third Post - More Content"
 date: 2020-01-09 08:30:00
 author: "Erik Moxley"
-path: "/third-post"
 image: ../../images/example.jpg
 tags:
   - tutorial
