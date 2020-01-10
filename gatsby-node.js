@@ -24,6 +24,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               author
+              tags
             }
             fields {
               slug
