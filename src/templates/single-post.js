@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
-import { Badge, Card, CardBody, CardSubtitle, Row, Col } from "reactstrap"
+import { Badge, Card, CardBody, CardSubtitle } from "reactstrap"
 import Img from "gatsby-image"
 import { slugify } from "../util/utilityFunctions"
 import authors from "../util/authors"
@@ -10,7 +10,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,
   faTwitter,
-  faGoogle,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import { DiscussionEmbed } from "disqus-react"

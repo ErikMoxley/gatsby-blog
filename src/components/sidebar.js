@@ -11,11 +11,7 @@ import {
 import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faFacebook,
-  faLinkedinIn,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 const Sidebar = ({ author, authorFluid }) => (
   <div>
