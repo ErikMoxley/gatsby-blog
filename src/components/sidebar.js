@@ -10,6 +10,12 @@ import {
 } from "reactstrap"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faFacebook,
+  faLinkedinIn,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons"
 
 const Sidebar = ({ author, authorFluid }) => (
   <div>
@@ -30,7 +36,7 @@ const Sidebar = ({ author, authorFluid }) => (
                   rel="noopener noreferrer"
                   className="linkedin"
                 >
-                  <i className="fab fa-linkedin fa-lg" />
+                  <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
                 <a
                   href={author.instagram}

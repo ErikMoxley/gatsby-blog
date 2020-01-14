@@ -1,4 +1,6 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => (
   <div className="site-footer">
@@ -13,7 +15,7 @@ const Footer = () => (
             rel="noopener noreferrer"
             className="facebook"
           >
-            Facebook
+            <FontAwesomeIcon icon={faFacebook} size="2x" />
           </a>
         </li>
       </ul>
