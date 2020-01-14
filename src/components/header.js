@@ -18,15 +18,10 @@ const Header = props => {
     <div>
       <Navbar fixed="top" light expand="sm">
         <div className="container">
-          <NavbarBrand href="https://www.erikmoxley.me/">
-            Erik Moxley
-          </NavbarBrand>
+          <NavbarBrand href="/">Home</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/">Home</NavLink>
-              </NavItem>
+            <Nav className="ml-left" navbar>
               <NavItem>
                 <NavLink href="/about/">About</NavLink>
               </NavItem>
@@ -36,6 +31,11 @@ const Header = props => {
               <NavItem>
                 <NavLink href="/tags">Tags</NavLink>
               </NavItem>
+            </Nav>
+            <Nav className="ml-auto" navbar>
+              <NavbarBrand href="https://www.erikmoxley.me/">
+                Erik Moxley
+              </NavbarBrand>
             </Nav>
           </Collapse>
         </div>

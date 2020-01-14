@@ -7,36 +7,29 @@ import { Row, Col } from "reactstrap"
 import Sidebar from "../components/sidebar"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout pageTitle="Erik Moxley">
     <SEO title="Home" />
-    <Row>
-      <Col md="8">
-        <StaticQuery
-          query={indexQuery}
-          render={data => {
-            return (
-              <div>
-                {data.allMarkdownRemark.edges.map(({ node }) => (
-                  <Post
-                    key={node.id}
-                    title={node.frontmatter.title}
-                    author={node.frontmatter.author}
-                    slug={node.fields.slug}
-                    date={node.frontmatter.date}
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                    body={node.excerpt}
-                    tags={node.frontmatter.tags}
-                  />
-                ))}
-              </div>
-            )
-          }}
-        />
-      </Col>
-      <Col md="4">
-        <Sidebar />
-      </Col>
-    </Row>
+    <StaticQuery
+      query={indexQuery}
+      render={data => {
+        return (
+          <div>
+            {data.allMarkdownRemark.edges.map(({ node }) => (
+              <Post
+                key={node.id}
+                title={node.frontmatter.title}
+                author={node.frontmatter.author}
+                slug={node.fields.slug}
+                date={node.frontmatter.date}
+                fluid={node.frontmatter.image.childImageSharp.fluid}
+                body={node.excerpt}
+                tags={node.frontmatter.tags}
+              />
+            ))}
+          </div>
+        )
+      }}
+    />
   </Layout>
 )
 
