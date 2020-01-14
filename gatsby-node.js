@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const singlePostTemplate = path.resolve("src/template/single-post.js")
+  const singlePostTemplate = path.resolve("src/templates/single-post.js")
 
   return graphql(`
     {
@@ -24,7 +24,6 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               author
-              tags
             }
             fields {
               slug
@@ -37,7 +36,7 @@ exports.createPages = ({ actions, graphql }) => {
     if (res.errors) return Promise.reject(res.errors)
     const posts = res.data.allMarkdownRemark.edges
 
-    post.forEach(({ node }) => {
+    posts.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
         component: singlePostTemplate,
